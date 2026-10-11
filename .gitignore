@@ -5,3 +5,6 @@ bin/
 *.exe
 *.cab
 .DS_Store
+Release/artifacts/
+*.tar.gz
+engine/

@@ -106,6 +106,7 @@ impl AdbManager {
     }
 
     /// Enable freeform multi-window desktop mode so each app opens in its own window
+    #[allow(dead_code)]
     pub fn enable_multi_window_desktop(&self, serial: &str) -> Result<()> {
         let _ = Command::new(&self.adb_bin)
             .args(["-s", serial, "shell", "settings", "put", "global", "enable_freeform_support", "1"])

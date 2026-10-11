@@ -6,7 +6,17 @@ Samsung never released a DeX app for Linux. LinDex makes it easy to launch and u
 
 ---
 
-> **Note:** Prebuilt binaries (AppImage) will be added to the Releases section soon. For now, you can build from source using the steps below.
+## Quick Start & Installation
+
+### Linux (Recommended)
+Download the latest pre-built package from our **[Releases](https://github.com/BeetleBot/LinDEX/releases)**:
+
+```bash
+tar -xzf LinDex-Linux-x64-*.tar.gz
+sudo ./install.sh
+lindex
+```
+*(The installer places LinDex in `/usr/share/lindex`, creates the `/usr/bin/lindex` command, adds app launcher icons, and ensures `adb` is installed on your Linux distribution).*
 
 ---
 
@@ -58,16 +68,22 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ### Build & Run
 
 ```bash
-git clone https://github.com/BeetleBot/LinDex.git
-cd LinDex
+git clone https://github.com/BeetleBot/LinDEX.git
+cd LinDEX
 cargo run --release
 ```
 
-To build an optimized binary:
+To build an optimized release binary:
 ```bash
 cargo build --release
 ```
-The binary will be at `target/release/linux-dex`.
+The binary will be generated at `target/release/lindex`.
+
+To package a standalone Linux distribution tarball:
+```bash
+./Release/linux/build-tarball.sh
+```
+Artifacts are generated in `Release/artifacts/`.
 
 ---
 

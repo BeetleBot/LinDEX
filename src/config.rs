@@ -91,6 +91,7 @@ pub fn find_bundled_bin_dir() -> std::path::PathBuf {
 
     // 3. Fallback well-known system paths
     let well_known = [
+        "/usr/share/lindex/engine",
         "/usr/local/share/lindex/engine",
         "/opt/lindex/engine",
     ];
