@@ -1,0 +1,7 @@
+/target/
+/dist/
+*.AppImage
+bin/
+*.exe
+*.cab
+.DS_Store
